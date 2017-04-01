@@ -6,20 +6,21 @@
     <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-<body>
-    <es-6></es-6>
-
     <!-- riot tags -->
-    <script src="/tags/es6.tag" type="riot/tag"></script>
+    <todo></todo>
+    <script src="/tags/todo.tag" type="riot/tag"></script>
 
     <!-- scripts we need -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
     <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
-
+    
     <!-- mount this app -->
-    <script> riot.mount('es-6') </script>
+    <script>
+      riot.mount('todo', {
+        title: 'Todo list!',
+        items: 
+        <%- list %>
+      })
+    </script>
   </body>
 </html>
