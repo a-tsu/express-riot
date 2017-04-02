@@ -7,6 +7,8 @@
   </head>
   <body>
     <!-- riot tags -->
+    <header></header>
+    <script src="/tags/header.tag" type="riot/tag"></script>
     <todo></todo>
     <script src="/tags/todo.tag" type="riot/tag"></script>
 
@@ -16,11 +18,8 @@
     
     <!-- mount this app -->
     <script>
-      riot.mount('todo', {
-        title: 'Todo list!',
-        items: 
-        <%- list %>
-      })
+      riot.mount('header', { title: 'Todo list' });
+      riot.mount('todo', { items: <%- list %> })
     </script>
   </body>
 </html>
