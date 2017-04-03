@@ -3,7 +3,12 @@ const fs = require('fs');
 
 /* redux */
 router.get('/flux', function(req, res, next) {
-  res.render('flux', {title: 'Express'});
+  res.render('flux', {title: 'Express Flux'});
+});
+
+/* tags */
+router.get('/custom', function(req, res, next) {
+  res.render('custom', {title: 'Riot tags'});
 });
 
 /* todo. */

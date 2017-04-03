@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
+    <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css' />
+  </head>
+  <body>
+    <!-- riot tags -->
+    <header></header>
+    <script src="/tags/header.tag" type="riot/tag"></script>
+    <my-tag></my-tag>
+    <script src="/tags/tags.tag" type="riot/tag"></script>
+
+    <!-- scripts we need -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    
+    <!-- mount this app -->
+    <script>
+      riot.mount('header', { title: 'Todo list' });
+      riot.mount('my-tag');
+    </script>
+  </body>
+</html>
