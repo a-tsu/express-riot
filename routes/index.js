@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const fs = require('fs');
 
-/* GET home page. */
+/* redux */
+router.get('/flux', function(req, res, next) {
+  res.render('flux', {title: 'Express'});
+});
+
+/* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
   fs.readFile('/tmp/content.txt', 'utf8', (err, data) => {
@@ -18,6 +23,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' , list: contentsLine});
   });
 });
+
 router.post('/', function(req, res, next) {
   console.log(req.body);
   fs.writeFile('/tmp/content.txt', req.body.list, 'utf8', (err) => {
