@@ -34,6 +34,36 @@
   </button>
 
   <!-- this script tag is optional -->
+  <script type="es6">
+    const postData = (items) => {
+      const itemsAll = JSON.stringify(items);
+
+      // フォームタグを生成
+      const form = document.createElement('form');
+      // フォームのmethodタイプ
+      form.method = 'POST';
+      // POST先
+      form.action = '/';
+
+      // POSTパラメータようにinputタグを生成
+      const data = document.createElement( 'input' );
+
+      // nameとvalueにそれぞれPOSTしたいパラメーターを追加
+      data.setAttribute( 'type' , 'hidden' );
+      data.setAttribute( 'name' , 'list' );
+      data.setAttribute( 'value' , itemsAll );
+
+      // フォームタグにinputタグを追加
+      form.appendChild( data );
+
+      // bodyにフォームタグを追加
+      document.body.appendChild(form);
+
+      alert(itemsAll);
+      // 生成したフォームをSUBMIT
+      return form.submit();
+    }
+  </script>
   <script>
     this.items = opts.items
 
@@ -56,34 +86,7 @@
     }
 
     saveItems(e) {
-      var itemsAll = JSON.stringify(this.items);
-
-      // フォームタグを生成
-      var form = document.createElement('form');
-
-      // フォームのmethodタイプ
-      form.method = 'POST';
-
-      // POST先
-      form.action = '/';
-
-      // POSTパラメータようにinputタグを生成
-      var data = document.createElement( 'input' );
-
-      // nameとvalueにそれぞれPOSTしたいパラメーターを追加
-      data.setAttribute( 'type' , 'hidden' );
-      data.setAttribute( 'name' , 'list' );
-      data.setAttribute( 'value' , itemsAll );
-
-      // フォームタグにinputタグを追加
-      form.appendChild( data );
-
-      // bodyにフォームタグを追加
-      document.body.appendChild(form);
-
-      alert(itemsAll);
-      // 生成したフォームをSUBMIT
-      return form.submit();
+        postData(this.items);
     }
 
     onlyDone(item) {
