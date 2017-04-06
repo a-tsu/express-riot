@@ -11,6 +11,11 @@ router.get('/custom', function(req, res, next) {
   res.render('custom', {title: 'Riot tags'});
 });
 
+/* submit */
+router.get('/submit', function(req, res, next) {
+  res.render('submit', {title: 'Riot onsubmit'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
