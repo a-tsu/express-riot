@@ -75,16 +75,6 @@
         window.alert('username: ', this.username.value);
         window.alert('password: ', this.password.value);
       };
-        
-      riot.route((tagName) => {
-        if(!tagName){
-          return;
-        }
-        riot.mount('contents', tagName);
-      });
-
-      riot.route.stop();
-      riot.route.start();
     </script>
 
 </submit>

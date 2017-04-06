@@ -6,7 +6,7 @@
   <a href="/custom">tags</a>
   <a href="/">todo</a>
   <a href="/submit">submit</a>
-  <a href="/submit-answer">submit-answer</a>
+  <a href="/nest">nest</a>
 
   <script type="es6">
     const name = 'a-tsu';

@@ -16,6 +16,11 @@ router.get('/submit', function(req, res, next) {
   res.render('submit', {title: 'Riot onsubmit'});
 });
 
+/* nest */
+router.get('/nest', function(req, res, next) {
+  res.render('nest', {title: 'Riot nest'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
