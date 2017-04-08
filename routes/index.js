@@ -21,6 +21,11 @@ router.get('/nest', function(req, res, next) {
   res.render('nest', {title: 'Riot nest'});
 });
 
+/* add-tags */
+router.get('/add-tags', function(req, res, next) {
+  res.render('add-tags', {title: 'Riot add-tags'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
