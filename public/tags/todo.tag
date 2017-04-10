@@ -6,36 +6,49 @@
     }
   </style>
 
-  <ul class="demo-list-control mdl-list">
-    <li class="mdl-list__item" each={ items }>
-      <span class="mdl-list__item-primary-content">
-        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-          <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked={ done } onclick={ parent.toggle }> { title }
-        </label>
-      </span>
-    </li>
-  </ul>
+  <child1></child1>
 
-  <form onsubmit={ add }>
-    <input ref="input" onkeyup={ edit }>
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" disabled={ !text }>
-      <i class="material-icons">add</i>
+  <child2></child2>
+
+  <child3></child3>
+
+  <child1>
+    <ul class="demo-list-control mdl-list">
+      <li class="mdl-list__item" each={ items }>
+        <span class="mdl-list__item-primary-content">
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked={ done } onclick={ parent.toggle }> { title }
+          </label>
+        </span>
+      </li>
+    </ul>
+  </child1>
+
+  <child2>
+    <form onsubmit={ add }>
+      <input ref="input" onkeyup={ edit }>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" disabled={ !text }>
+        <i class="material-icons">add</i>
+      </button>
+  
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" type="button"
+        disabled={ items.filter(onlyDone).length == 0 } onclick={ removeAllDone }>
+        <i class="material-icons">delete</i>
+      </button>
+  
+    </form>
+  </child2>
+
+  <child3>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect"
+      ref="submit" onclick={ saveItems }>
+      Save
     </button>
-
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" type="button"
-      disabled={ items.filter(onlyDone).length == 0 } onclick={ removeAllDone }>
-      <i class="material-icons">delete</i>
-    </button>
-
-  </form>
-
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect"
-    ref="submit" onclick={ saveItems }>
-    Save
-  </button>
+  </child3>
 
   <!-- this script tag is optional -->
   <script>
+    var child = this.tags.child
     this.items = opts.items
 
     edit(e) {
