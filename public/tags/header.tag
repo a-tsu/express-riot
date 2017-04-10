@@ -8,6 +8,7 @@
   <a href="/submit">submit</a>
   <a href="/nest">nest</a>
   <a href="/add-tags">add-tags</a>
+  <a href="/yield">yield</a>
 
   <script type="es6">
     const name = 'a-tsu';

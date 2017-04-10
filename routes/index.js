@@ -26,6 +26,11 @@ router.get('/add-tags', function(req, res, next) {
   res.render('add-tags', {title: 'Riot add-tags'});
 });
 
+/* yield */
+router.get('/yield', function(req, res, next) {
+  res.render('yield', {title: 'Riot yield'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
