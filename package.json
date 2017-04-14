@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "forever --minUptime 1000 --spinSleepTime 1000 start bin/www",
-    "stop": "forever stop bin/www"
+    "stop": "forever stop bin/www.js"
   },
   "dependencies": {
     "body-parser": "^1.16.1",
