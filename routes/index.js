@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const fs = require('fs');
 
-/* redux */
+/* flux */
 router.get('/flux', function(req, res, next) {
   res.render('flux', {title: 'Express Flux'});
 });
