@@ -1,4 +1,3 @@
- 
 module.exports = function(config) {
   config.set({
     basePath: '',
@@ -11,7 +10,6 @@ module.exports = function(config) {
       'karma-riot'
     ],
     files: [
-      'node_modules/chai/chai',
       'public/tags/*.tag',
       'test/tags/*.js'
     ],

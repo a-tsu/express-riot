@@ -31,6 +31,11 @@ router.get('/yield', function(req, res, next) {
   res.render('yield', {title: 'Riot yield'});
 });
 
+/* observable */
+router.get('/observable', function(req, res, next) {
+  res.render('observable', {title: 'observable'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;

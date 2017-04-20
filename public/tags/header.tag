@@ -9,6 +9,7 @@
   <a href="/nest">nest</a>
   <a href="/add-tags">add-tags</a>
   <a href="/yield">yield</a>
+  <a href="/observable">observable</a>
 
   <script type="es6">
     const name = 'a-tsu';
