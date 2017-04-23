@@ -1,5 +1,5 @@
 <baz>
-  <p>{textLength}</p>
+  <p>length: {textLength}</p>
   <script>
     var that = this;
     this.textLength = 0;
