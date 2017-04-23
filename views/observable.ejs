@@ -9,18 +9,24 @@
     <!-- riot tags -->
     <header></header>
     <script src="/tags/header.tag" type="riot/tag"></script>
-    <receiver></receiver>
-    <script src="/tags/receiver.tag" type="riot/tag"></script>
+    <foo></foo>
+    <script src="/tags/foo.tag" type="riot/tag"></script>
+    <bar></bar>
+    <script src="/tags/bar.tag" type="riot/tag"></script>
+    <baz></baz>
+    <script src="/tags/baz.tag" type="riot/tag"></script>
 
     <!-- scripts we need -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
     <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
-    <script src="/js/timer.js"></script>
     
     <!-- mount this app -->
     <script>
       riot.mount('header');
       var obs = riot.observable();
+      riot.mount('foo');
+      riot.mount('bar');
+      riot.mount('baz');
     </script>
   </body>
 </html>
