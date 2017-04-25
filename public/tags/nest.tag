@@ -5,7 +5,6 @@
     <child1 name='my_nested_tag1'></child1>
     <script>
       this.my_nested_tag2 = '2nd child orz';
-      this.for_child = '3rd child yeah';
     </script>
 </nest>
 
@@ -21,9 +20,15 @@
 </child2>
 
 <child3>
-  <h3>I'm { arg }</h3>
+  <child4></child4>
     <script>
-      this.arg = this.parent.for_child;
-      console.log(this.parent);
+      this.for_child = '3rd child yeah';
     </script>
 </child3>
+
+<child4>
+  <h3>I'm { arg } from 4th</h3>
+    <script>
+      this.arg = this.parent.for_child;
+    </script>
+</child4>
