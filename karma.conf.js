@@ -10,11 +10,12 @@ module.exports = function(config) {
       'karma-riot'
     ],
     files: [
-      'public/tags/*.tag',
-      'test/tags/*.js'
+      'node_modules/expect.js/index.js', 
+      'public/tags/header.tag',
+      'test/tags/header.spec.js'
     ],
     preprocessors: {
-      'public/tags/*.tag': ['riot']
+      'public/tags/header.tag': ['riot']
     },
     browsers: ['PhantomJS'],
     reporters: ['mocha'],
