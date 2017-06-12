@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "forever --minUptime 1000 --spinSleepTime 1000 start bin/www",
+    "start": "forever --minUptime 1000 --spinSleepTime 1000 start bin/www.js",
     "stop": "forever stop bin/www.js",
     "test": "karma start"
   },

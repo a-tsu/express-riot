@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- riot tags -->
+    <edit-config></edit-config>
+    <script src="/tags/edit.tag" type="riot/tag"></script>
+
+    <!-- scripts we need -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    
+    <!-- mount this app -->
+    <script>
+      riot.mount('edit');
+    </script>
+  </body>
+</html>

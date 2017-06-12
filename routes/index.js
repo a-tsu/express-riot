@@ -36,6 +36,11 @@ router.get('/observable', function(req, res, next) {
   res.render('observable', {title: 'observable'});
 });
 
+/* edit */
+router.get('/edit', function(req, res, next) {
+  res.render('edit', {title: 'edit-config'});
+});
+
 /* todo. */
 router.get('/', function(req, res, next) {
   let contentsObj;
